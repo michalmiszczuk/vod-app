@@ -1,4 +1,4 @@
-import { setError } from '../store/appSlice';
+import { setError } from '../store/slices/appSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 
 function ErrorToast() {

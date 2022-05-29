@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLogInUserMutation } from '../store/api';
-import { setUser } from '../store/appSlice';
+import { setUser } from '../store/slices/appSlice';
 import { useAppDispatch } from '../store/hooks';
 import { XIcon } from '@heroicons/react/solid'
 

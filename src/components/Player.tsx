@@ -1,7 +1,7 @@
 import ReactPlayer from 'react-player';
-import { setIsPlaying, setUrl } from '../store/playerSlice';
+import { setIsPlaying, setUrl } from '../store/slices/playerSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { setError } from '../store/appSlice';
+import { setError } from '../store/slices/appSlice';
 
 function Player() {
     const { url } = useAppSelector(state => state.player);

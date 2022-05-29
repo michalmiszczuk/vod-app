@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthenticateUserMutation } from '../store/api';
-import { setUser } from '../store/appSlice';
+import { setUser } from '../store/slices/appSlice';
 import { useAppDispatch } from '../store/hooks';
 import LoginForm from './LoginForm';
 

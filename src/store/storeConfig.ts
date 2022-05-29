@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {vodApi} from "./api";
-import appSlice from "./appSlice";
+import appSlice from "./slices/appSlice";
 import {loadingHandler} from "./middleware/loadingHandler";
 import {metaHandler} from "./middleware/metaHandler";
-import playerSlice from "./playerSlice";
+import playerSlice from "./slices/playerSlice";
 
 export const store = configureStore({
   reducer: {

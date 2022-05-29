@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useGetPlayMediaMutation } from '../store/api';
-import { setIsPlaying, setUrl } from '../store/playerSlice';
+import { setIsPlaying, setUrl } from '../store/slices/playerSlice';
 import fallBackImg from '../images/alex-litvin-unsplash.jpg'
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { OneMovie } from '../types/movie';

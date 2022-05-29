@@ -1,5 +1,5 @@
 import React from 'react';
-import { setUser } from '../store/appSlice';
+import { setUser } from '../store/slices/appSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 
 function NavBar() {
