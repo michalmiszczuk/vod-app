@@ -28,10 +28,12 @@ function Movie({ movie }: MovieProps) {
 
     return (
         <div>
-            <div className='movie' key={movie.Title}>
-                <div className='movie__title'>{movie.Title}</div>
-                <img onClick={() => getMedia({ id: movie.Id, token: token || '', streamType })}
-                 className='movie__img' alt="movie frame" src={movieFrame?.Url || fallBackImg} />
+            <div className='movie-box' key={movie.Title}>
+                <div className='movie-box__img-container'>
+                    <img onClick={() => getMedia({ id: movie.Id, token: token || '', streamType })}
+                     className='movie-box__img' alt="movie frame" src={movieFrame?.Url || fallBackImg} />
+                    <div className='movie-box__title'>{movie.Title}</div>
+                </div>
             </div>
         </div>
     );

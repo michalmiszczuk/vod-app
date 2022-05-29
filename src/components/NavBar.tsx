@@ -1,4 +1,3 @@
-import React from 'react';
 import { setUser } from '../store/slices/appSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 

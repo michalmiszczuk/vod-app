@@ -21,7 +21,7 @@ function LoginForm({ onCloseForm }: LoginFormProps) {
             dispatch(setUser(data.User.FullName))
             onCloseForm()
         }
-    }, [data])
+    }, [data, dispatch, onCloseForm])
 
     
     const handleLogIn = (e: React.FormEvent) => {

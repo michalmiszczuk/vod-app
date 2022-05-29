@@ -31,4 +31,3 @@ export const appSlice = createSlice({
 
 export const {setError, setUser, setIsLoading} = appSlice.actions;
 export default appSlice.reducer;
-// console.log(setIsLoading());

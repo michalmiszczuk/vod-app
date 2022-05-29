@@ -13,8 +13,8 @@ function App() {
 
   return (
     <div className="app-container">
-      {user && <NavBar />}
       {!user && <SplashScreen />}
+      {user && <NavBar />}
       {user && <Home />}
       {isPlaying && <Player />}
       {isLoading && <Spinner />}

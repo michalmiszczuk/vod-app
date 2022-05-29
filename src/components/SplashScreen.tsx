@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuthenticateUserMutation } from '../store/api';
 import { setUser } from '../store/slices/appSlice';
 import { useAppDispatch } from '../store/hooks';
@@ -19,10 +19,10 @@ function SplashScreen() {
 
     return (
         <div className='splash-screen'>
-            <h1 className='splash-screen__title'>EXPERIENCE NEW DIMENSION OF MOVIES</h1>
+            <h1 className='splash-screen__title'>a fancy app name</h1>
             <div className='splash-screen__login-box'>
-                <button onClick={() => authenticate('_')} className='splash-screen__login-box__btn'>LOG AS A GUEST</button>
-                <button onClick={() => setLoginScreen(true)} className='splash-screen__login-box__btn'>LOG IN</button>
+                {!loginScreen && <button onClick={() => authenticate('_')} className='splash-screen__login-box__btn'>LOG AS A GUEST</button>}
+                {!loginScreen && <button onClick={() => setLoginScreen(true)} className='splash-screen__login-box__btn'>LOG IN</button>}
                 {loginScreen && <LoginForm onCloseForm={() => setLoginScreen(false)} />}
             </div>
         </div>
