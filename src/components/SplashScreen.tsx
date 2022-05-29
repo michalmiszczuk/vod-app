@@ -19,7 +19,7 @@ function SplashScreen() {
 
     return (
         <div className='splash-screen'>
-            <h1 className='splash-screen__title'>a fancy app name</h1>
+            <h1 className='splash-screen__title'>app name or logo</h1>
             <div className='splash-screen__login-box'>
                 {!loginScreen && <button onClick={() => authenticate('_')} className='splash-screen__login-box__btn'>LOG AS A GUEST</button>}
                 {!loginScreen && <button onClick={() => setLoginScreen(true)} className='splash-screen__login-box__btn'>LOG IN</button>}
