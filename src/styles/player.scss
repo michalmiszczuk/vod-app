@@ -1,0 +1,44 @@
+@use "colors" as colors;
+  
+.player{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(84, 84, 84, 0.7);
+    z-index: 1;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    
+    &__btn-close{
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 20vw;
+        border-radius: 10rem;
+        background-color: colors.$red-dark;
+        color: colors.$grey-1;
+        transition: all 0.2s;
+
+        &:hover, &:active {
+            background-color: colors.$red-primary;
+            cursor: pointer;
+        }
+
+        }
+    &__fallback-msg{
+        background-image: url(../images/alex-litvin-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        height: 30vh;
+        font-size: 2rem;
+        color: colors.$grey-1;
+    }
+}

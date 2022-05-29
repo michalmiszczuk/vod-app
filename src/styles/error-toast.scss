@@ -1,0 +1,45 @@
+@use 'colors' as colors;
+
+.error-toast{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: colors.$red-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    flex-flow: column;
+    justify-content: space-evenly;
+    animation: slide-down 1s forwards;
+    z-index: 20;
+    font-size: 2rem;
+    color: colors.$grey-1;
+
+    &__error-msg{
+        margin-bottom: 2rem;
+    }
+
+    &__btn{
+        background-color: colors.$red-primary;
+        padding: 1.6rem 4rem;
+        font-size: 1.6rem;
+        border-radius: 5rem;
+        transition: all 0.2s;
+        &:hover{
+            background-color: colors.$red-dark;
+            cursor: pointer;
+        }
+       }
+}
+
+@keyframes slide-down {
+    0%{
+        transform: translateY(-20rem)
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}

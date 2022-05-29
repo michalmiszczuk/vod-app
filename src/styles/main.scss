@@ -1,0 +1,64 @@
+@use "splash-screen";
+@use "home";
+@use "movie";
+@use "player";
+@use "nav-bar";
+@use "spinner";
+@use "error-toast";
+@use "login-form";
+@use "colors" as colors;
+
+/* main app styles
+
+// TYPOGRAPHY SYSTEM 
+-Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-Font weights: 
+-Line Heights: default: 1,
+
+ - SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+//COLORS
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    background-color: #000;
+    color: colors.$grey-1;
+  
+}
+
+button{
+    border: none;
+    color: colors.$grey-1;
+    text-transform: uppercase;
+    font-family: 'rubik', sans-serif;
+}
+
+.app-container{
+    text-align: center;
+    color: colors.$primary;
+}

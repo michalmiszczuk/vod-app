@@ -1,0 +1,33 @@
+@use 'colors' as colors;
+.home{
+    background-color: #000;
+    height: 100%;
+    color: colors.$grey-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     
+
+    &__movie-list{
+        max-height: 90vh;
+        overflow: scroll;
+
+        &::-webkit-scrollbar{
+            background-color: transparent;
+            width: 0rem;
+        }
+        // &::-webkit-scrollbar-thumb{
+        //     background-color: colors.$grey-1;
+        //     cursor: pointer;
+        // }
+    }
+
+    &__movie-list-title{
+        font-weight: 200;
+        position: sticky;
+        top: 0;
+        background-color: #111;
+        padding: 2vh 0;
+        z-index: 1;
+        font-style: italic;
+    }
+}

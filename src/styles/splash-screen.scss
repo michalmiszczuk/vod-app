@@ -1,0 +1,49 @@
+@use 'colors' as colors;
+
+.splash-screen{
+    width: 100%;
+    height: 100vh;
+    background-color: #111111;
+    background-image: url('../images/jeff-pierre-unsplash.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__title{
+        font-size: 4.8rem;
+        font-style: italic;
+        font-weight: 200;
+        padding-top: 4rem;
+        color: colors.$grey-2
+    }
+
+    &__login-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(17, 17, 17, 0.75);
+        border-radius: 1rem;
+    
+        &__btn{
+            padding: 2rem;
+            border-radius: 10px;
+            width: 50%;
+            background-color: colors.$primary-dark;
+            color: colors.$grey-1;
+            transition: all 0.2s;
+    
+            &:hover{
+                background-color: colors.$primary-light;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
