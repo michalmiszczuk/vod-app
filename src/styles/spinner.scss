@@ -1,4 +1,4 @@
-@use 'colors' as colors;
+@use "variables" as var;
 $spinner-border-size: 0.3rem;
 
 .spinner__container {
@@ -21,11 +21,11 @@ $spinner-border-size: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    height: 20rem;
+    width: 12rem;
+    height: 12rem;
 
     &__text{
-        color: colors.$grey-1;
+        color: var.$grey-1;
         animation: loading-opacity 3s ease-in-out infinite;
         z-index: 20;
         font-size: 2rem;
@@ -40,16 +40,16 @@ $spinner-border-size: 0.3rem;
         // background-color: colors.$secondary;
 
         &--first{
-            border-top: $spinner-border-size solid colors.$primary-light;
+            border-top: $spinner-border-size solid var.$primary-light;
             animation: rotate 2s ease-out infinite;
         }
         &--second{
             animation: rotate 2.5s ease-in infinite;
-            border-top: $spinner-border-size solid colors.$primary;
+            border-top: $spinner-border-size solid var.$primary;
         }
         &--third{
             animation: rotate 1.5s ease-in-out infinite;
-            border-top: $spinner-border-size solid colors.$primary-dark;
+            border-top: $spinner-border-size solid var.$primary-dark;
         }
     }
   }

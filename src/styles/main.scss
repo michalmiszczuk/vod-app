@@ -6,7 +6,7 @@
 @use "spinner";
 @use "error-toast";
 @use "login-form";
-@use "colors" as colors;
+@use "variables" as var;
 
 /* main app styles
 
@@ -47,18 +47,17 @@ body {
     font-weight: 200;
     line-height: 1;
     background-color: #000;
-    color: colors.$grey-1;
+    color: var.$grey-1;
   
 }
 
 button{
     border: none;
-    color: colors.$grey-1;
+    color: var.$grey-1;
     text-transform: uppercase;
     font-family: 'rubik', sans-serif;
 }
 
 .app-container{
     text-align: center;
-    color: colors.$primary;
 }

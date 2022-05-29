@@ -1,11 +1,11 @@
-@use "colors" as colors;
+@use "variables" as var;
   
 .player{
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(84, 84, 84, 0.7);
+    background-color: var.$secondary-transpartent;
     z-index: 1;
     top:0;
     left: 0;
@@ -19,12 +19,12 @@
         padding: 1rem;
         width: 20vw;
         border-radius: 10rem;
-        background-color: colors.$red-dark;
-        color: colors.$grey-1;
+        background-color: var.$secondary-dark;
+        color: var.$grey-1;
         transition: all 0.2s;
 
         &:hover, &:active {
-            background-color: colors.$red-primary;
+            background-color: var.$secondary-light;
             cursor: pointer;
         }
 
@@ -39,6 +39,6 @@
         width: 30vw;
         height: 30vh;
         font-size: 2rem;
-        color: colors.$grey-1;
+        color: var.$grey-1;
     }
 }

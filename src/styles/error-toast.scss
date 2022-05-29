@@ -1,35 +1,37 @@
-@use 'colors' as colors;
+@use "variables" as var;
 
 .error-toast{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: colors.$red-primary;
+    height: 100vh;
+    background-color: var.$secondary-transpartent
+    ;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     text-align: center;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: center;
     animation: slide-down 1s forwards;
     z-index: 20;
     font-size: 2rem;
-    color: colors.$grey-1;
+    color: var.$grey-1;
 
     &__error-msg{
         margin-bottom: 2rem;
     }
 
     &__btn{
-        background-color: colors.$red-primary;
+        background-color: rgb(82, 82, 82);
         padding: 1.6rem 4rem;
         font-size: 1.6rem;
         border-radius: 5rem;
         transition: all 0.2s;
         &:hover{
-            background-color: colors.$red-dark;
+            background-color: rgb(65, 65, 65);
             cursor: pointer;
         }
        }
@@ -37,9 +39,9 @@
 
 @keyframes slide-down {
     0%{
-        transform: translateY(-20rem)
+        transform: translateX(-100vw)
     }
     100%{
-        transform: translateY(0rem);
+        transform: translateX(0rem);
     }
 }

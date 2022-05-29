@@ -1,25 +1,23 @@
-@use 'colors' as colors;
+@use "variables" as var;
 
 .login-form{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 30vw;
+    height: 50vh;
     z-index: 20;
-    background-color: #111;
-    color: colors.$grey-1;
+    background-color: rgba(10, 10, 10, 0.7);;
+    color: var.$grey-1;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    border-radius: 1rem;
 
     &__label-input-box{
         display: flex;
         flex-flow: column;
         align-items: center;
-        // border: 1px solid blue;
         padding: 1rem;
-        &:not(:last-child) {
-            margin: 2rem 0;
-        }
+        margin: 1rem 0;
     }
 
     &__close-icon{
@@ -30,22 +28,14 @@
 
         &:hover{
             cursor: pointer;
-            background-color: colors.$primary;
         }
     }
-    // form{
-    //     width: 100%;
-    //     height: 100%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
+
 
     label,input{
         padding: 1rem;
         border: none;
-        color: colors.$grey-1;
+        color: var.$grey-1;
         font-family: sans-serif;
         width: 60%;
     }
@@ -59,16 +49,32 @@
         padding: 1.6rem 4rem;
         // margin-top: 2rem;
         background-color: #748ffc44;
-        color: colors.$grey-1;
+        color: var.$grey-1;
         border-radius: 10rem;
         transition: all 0.2s;
+        margin-top: 1rem;
         
         &:hover{
-            background-color: colors.$primary-light;
+            background-color: var.$primary;
             cursor: pointer;
         }
     }
-    
+}
 
-   
+@media (max-width: var.$smaller-desktops) {
+    .login-form{
+        width: 40vw;
+    }
+}
+@media (max-width: var.$tablets) {
+    .login-form{
+        width: 50vw;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: var.$phones) {
+    .login-form{
+        width: 80vw;
+    }
 }

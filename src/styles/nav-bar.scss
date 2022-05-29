@@ -1,20 +1,22 @@
-@use "colors" as colors;
+@use "variables" as var;
 
 .navbar{
-    color: colors.$grey-1;
+    color: var.$grey-1;
     display: flex;
     padding: 2vh 1rem;
     font-size: 1.6rem;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.6rem;
+    font-weight: 400;
 
     &__btn-logout{
         padding:1rem;
         font-size: 1.6rem;
         background-color: transparent;
-        color: colors.$grey-1;
-        text-transform: uppercase;
+        color: var.$grey-1;
         transition: all 0.4s;
+        border-radius: 1rem;
 
         &:hover{
             cursor: pointer;

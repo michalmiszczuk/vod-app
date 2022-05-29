@@ -1,16 +1,17 @@
-@use 'colors' as colors;
+@use "variables" as var;
+
 .home{
     background-color: #000;
     height: 100%;
-    color: colors.$grey-1;
+    color: var.$grey-1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 10vw;
      
 
     &__movie-list{
         max-height: 90vh;
         overflow: scroll;
-
         &::-webkit-scrollbar{
             background-color: transparent;
             width: 0rem;
@@ -25,9 +26,35 @@
         font-weight: 200;
         position: sticky;
         top: 0;
-        background-color: #111;
-        padding: 2vh 0;
+        background-color: #131313e1;
+        padding: 2rem 0;
         z-index: 1;
-        font-style: italic;
+        margin: 0 1rem;
     }
+
+  
 }
+
+@media (max-width: var.$smaller-desktops) {
+    .home{
+        margin: 0 0vw;
+    }
+} 
+
+@media (max-width: var.$tablets) {
+    .home{
+        &__movie-list-title{
+            font-size: 2rem;
+            padding: 1.6rem 0;
+        }
+    }
+} 
+
+@media (max-width: var.$phones) {
+    .home{
+        &__movie-list-title{
+            font-size: 1.6rem;
+            padding: 1rem 0;
+        }
+    }
+} 
