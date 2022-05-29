@@ -42,3 +42,11 @@
         color: var.$grey-1;
     }
 }
+
+@media (max-width: var.$tablets) {
+    .player{
+        &__fallback-msg{
+            width: 70vw;
+        }
+    }
+} 
